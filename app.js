@@ -22,5 +22,14 @@ function addTodo(event){
     todoDiv.appendChild(newTodo);
     //CHeck mark button
     const completedButton = document.createElement('button');
-    completedButton.innerText = '<i class="fas fa-check"></i>';
+    completedButton.innerHTML = '<i class="fas fa-check"></i>';
+    completedButton.classList.add("complete-btn");
+    todoDiv.appendChild(completedButton);
+    //CHeck thrash button
+    const thrashButton = document.createElement('button');
+    thrashButton.innerHTML = '<i class="fas fa-thrash"></i>';
+    thrashButton.classList.add("complete-btn");
+    todoDiv.appendChild(thrashButton);
+    //Append to the list in html document
+    todoList.appendChild(todoDiv);
 }
