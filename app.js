@@ -7,6 +7,7 @@ const todoList = document.querySelector('.todo-list');
 //Event Listeners
 //we add on the selector event listener, which on event click will fire function addTodo
 todoButton.addEventListener('click', addTodo);
+todoList.addEventListener('click', deleteCheck);
 
 //Function
 function addTodo(event){
@@ -36,4 +37,33 @@ function addTodo(event){
     todoList.appendChild(todoDiv);
     //clear Todo Input value
     todoInput.value = "";
+}
+
+//method for deleting todo item
+function deleteCheck(event){
+    console.log('delete button was pressed >>' + event.target);
+    //grab the item
+    //https://www.w3schools.com/jsref/event_target.asp
+    const item = event.target;
+    //DELETE TDO
+    if(item.classList[0] === 'trash-btn'){
+        // item.remove();
+        //now we can remove parent element
+        const todo = item.parentElement;
+        //animation and after animation finish we would like to delete element
+        todo.classList.add('fall');
+        todo.addEventListener('transitionend', function(){
+            //this function is executed after animation
+            todo.remove();
+        });
+        
+        // todo.remove();
+    }
+
+    //CHECK MARK
+    if(item.classList[0] === 'complete-btn') {
+        const todo = item.parentElement;
+        //after clicking check button we will add css class on this item, so we can change its appearance
+        todo.classList.toggle('completed');
+    }
 }

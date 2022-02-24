@@ -62,6 +62,7 @@ form button:hover {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    transition: all 0.5s ease;
 }
 
 .todo li{
@@ -91,4 +92,20 @@ form button:hover {
 /* we dont like input value to be stick on the border */
 .todo-item {
     padding: 0rem 0.5rem;
+}
+
+.fa-trash,
+.fa-check {
+    pointer-events: none;
+}
+
+/* after clicking checked button we will change appearance of element */
+.completed{
+    text-decoration: line-through;
+    opacity: 0.5;
+}
+
+.fall{
+    transform: translate(8rem) rotateZ(20deg);
+    opacity: 0;
 }
