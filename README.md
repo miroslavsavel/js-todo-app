@@ -18,3 +18,8 @@ EM = setting the font-size of an element relative to the font-size of its parent
 REM = The rem unit, short for root em is a relative unit that’ll always be based upon the font-size value of the root 
 
 # 30:56 delete functionality
+
+# 41:51 filters
+css select field - we remove all styles
+
+# 56:23 saving to local storage

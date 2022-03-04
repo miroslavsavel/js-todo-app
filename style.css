@@ -109,3 +109,47 @@ form button:hover {
     transform: translate(8rem) rotateZ(20deg);
     opacity: 0;
 }
+
+
+/* filter */
+/* remove styles first */
+select {
+    -webkit-appearance:none;
+    -moz-appearance: none;
+    appearance: none;
+    outline: none;
+    border: none;
+}
+
+.select{
+    margin: 1rem;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Type selector
+Selects all elements that have the given node name. */
+select {
+    color:#1abd79;
+    width: 10rem;
+    cursor: pointer;
+    padding: 1rem;
+}
+/* add arrow after filter */
+.select::after {
+    content: "\25BC";
+    position: absolute;
+    background: #0d7d85;
+    top: 0;
+    right: 0;
+    padding: 1rem;
+    /* we can now click on it */
+    pointer-events: none;
+    transition: all 0.3s ease;
+}
+
+/* transition after hovering mouse over the filter */
+.select:hover:after{
+    background: #4b1197;
+    color:#dd3458;
+}
