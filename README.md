@@ -23,3 +23,5 @@ REM = The rem unit, short for root em is a relative unit that’ll always be bas
 css select field - we remove all styles
 
 # 56:23 saving to local storage
+dev mode
+storage
