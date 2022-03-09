@@ -25,3 +25,8 @@ css select field - we remove all styles
 # 56:23 saving to local storage
 dev mode
 storage
+
+- updating UI not only save to the local storage
+
+- but now we need also function removeLocalTodos for deleting local storage todos, because after reloading page, the todos are still there
+
